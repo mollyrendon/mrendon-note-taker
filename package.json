@@ -1,0 +1,23 @@
+{
+  "name": "mrendon-note-taker",
+  "version": "1.0.0",
+  "description": "An application designed to allow users to write, save, and delete notes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mollyrendon/mrendon-note-taker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mollyrendon/mrendon-note-taker/issues"
+  },
+  "homepage": "https://github.com/mollyrendon/mrendon-note-taker#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
