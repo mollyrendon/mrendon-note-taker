@@ -2,6 +2,14 @@ const util = require('util');
 const fs = require('fs');
 const uuid = require('uuid').v1;
 
+/*File Async:
+The readFileAsync is a function that reads the contents of the file.
+The writeFileAsync is a function to write the contents of the file.  This code uses promises, which
+are objects that represent future value.  The promis will resolve when either the readFile or the 
+writeFile is completed successfully.  This means the the code can read and write files at the same
+time.
+*/
+
 const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
 
