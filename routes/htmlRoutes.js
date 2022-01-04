@@ -1,6 +1,6 @@
 const path = require('path');
 
-const router =require('express').Router();
+const router = require('express').Router();
 
 /*Send Notes Route:
 The first route uses the sendFile() method of res object which send notes.html file

@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const store = require('../db/store');
+const store = require('../db/store.js');
 
 /*Get Notes Route Function:
 This first route gets all existing notes from the database by calling the getNotes() method.
