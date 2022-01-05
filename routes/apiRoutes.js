@@ -3,8 +3,10 @@ const router = require('express').Router();
 const store = require('../db/store.js');
 
 /*Get Notes Route Function:
-This first route gets all existing notes from the database by calling the getNotes() method.
-If there are no notes to get it returns as an empty array.  
+This first route gets all existing notes from the database by calling the getNotes() method.  The 'store' 
+calls the getNotes() method which will return a promis containing notes data if it succeeds.  Otherwise it will send back an error
+message, response of status code 500
+ 
 */
 router.get('/notes', (req, res) => {
     store
@@ -40,7 +42,9 @@ router.post('/notes', (req, res) => {
 
 /*Delete Notes Route Function:
 The third route called /notes/:id deletes notes based on their ID value which is passed into
-this function's URL parameter (req).
+this function's URL parameter (req). The 'store' calls removeNote on its model with req.params.id as a parameter 
+in order to delete on specific note from its database of notes.  If there is an error it sends back a response
+with status code 500.  
 */
 
 router.delete('/notes/:id', (req, res) => {
